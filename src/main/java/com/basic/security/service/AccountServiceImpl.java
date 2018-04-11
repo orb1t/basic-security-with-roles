@@ -15,9 +15,15 @@ public class AccountServiceImpl {
 	*/
 	
 	public Account findAccountByUserName(String userName) {
+		
+		if(userName.equals("rinku")) {
 		List<String> roles = new ArrayList<>();
 		roles.add("USER");
+		roles.add("ADMIN");
 		return new Account("rinku","sharma",roles);
+		} else {
+			return null ;
+		}
 	}
 	
 

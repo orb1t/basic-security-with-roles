@@ -27,7 +27,9 @@ class WebSecurityConfiguration extends GlobalAuthenticationConfigurerAdapter {
 
   @Override
   public void init(AuthenticationManagerBuilder auth) throws Exception {
-    auth.userDetailsService(userDetailsService());
+	  auth.userDetailsService(userDetailsService());
+	  /*auth.inMemoryAuthentication().withUser("rinku").password("sharma").roles("ADMIN");
+      auth.inMemoryAuthentication().withUser("anil").password("sharma").roles("USER");*/
   }
 
   @Bean
